@@ -1,202 +1,62 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>Brickzit</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 
-<head>
-	<title>Brickzit</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- Vendors-->
+		<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
+		<!-- App & fonts-->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/coming-soon-01.css">
 
-	<!-- Vendors-->
-	<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/grid.css">
-	<!-- App & fonts-->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
-	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/coming-soon-01.css">
-
-	<!--[if lt IE 9]>
+		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<![endif]-->
-</head>
-
-<body>
-	<div class="page-wrap">
-		<!-- Content-->
-		<div class="md-content">
-
-			<!-- Section -->
-			<section class="awe-section awe-skin-dark display-flex-center"
-				style="background-image:url(&quot;assets/img/bg/coming-soon.jpg&quot;);height:100vh;">
-				<div class="awe-overlay"></div>
-				<div class="container">
-
-					<!-- comming-soon-01 -->
-					<div class="comming-soon-01">
-						<h3 class="comming-soon-01__title">Website under contruction</h3>
-						<p class="comming-soon-01__desc">We are working on our website and will be online again. Stay
-							tuned!</p>
-
-						<!-- countdown__module hide undefined -->
-						<div class="countdown__module hide undefined" data-date="2021/5/13">
-							<p><span>%D</span> Days</p>
-							<p><span>%H</span> Hours</p>
-							<p><span>%M</span> Minutes</p>
-							<p><span>%S</span> Seconds</p>
-						</div><!-- End / countdown__module hide undefined -->
-
-					</div><!-- End / comming-soon-01 -->
-
-				</div>
-			</section>
-			<!-- End / Section -->
-			<div id="particles-js"></div>
+	</head>
+	
+	<body>
+		<div class="page-wrap">
+			<!-- Content-->
+			<div class="md-content">
+				
+				<!-- Section -->
+				<section class="awe-section awe-skin-dark display-flex-center" style="background-image:url(&quot;assets/img/bg/coming-soon.jpg&quot;);height:100vh;">
+					<div class="awe-overlay"></div>
+					<div class="container">
+						
+						<!-- comming-soon-01 -->
+						<div class="comming-soon-01">
+							<h3 class="comming-soon-01__title">Website under contruction</h3>
+							<p class="comming-soon-01__desc">We are working on our website and will be online again. Stay tuned!</p>
+							
+							<!-- countdown__module hide undefined -->
+							<div class="countdown__module hide undefined" data-date="2021/5/13">
+								<p><span>%D</span> Days</p>
+								<p><span>%H</span> Hours</p>
+								<p><span>%M</span> Minutes</p>
+								<p><span>%S</span> Seconds</p>
+							</div><!-- End / countdown__module hide undefined -->
+							
+						</div><!-- End / comming-soon-01 -->
+						
+					</div>
+				</section>
+				<!-- End / Section -->
+				<div id="particles-js"></div>
+			</div>
+			<!-- End / Content-->
 		</div>
-		<!-- End / Content-->
-	</div>
-	<!-- Vendors-->
-	<script type="text/javascript" src="assets/vendors/_jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/vendors/jquery.countdown/jquery.countdown.min.js"></script>
-	<script type="text/javascript" src="assets/vendors/particles.js/particles.min.js"></script>
-	<!-- main script-->
-	<script type="text/javascript">
-		(function ($) {
-			"use strict";
-			window.startComingSoon = function () {
-
-				/**
-				 * Countdown
-				 */
-				$('.countdown__module').each(function () {
-					var self = $(this),
-						_date = self.attr('data-date'),
-						_strf = self.html();
-					self.countdown(_date, function (event) {
-						self.html(event.strftime(_strf));
-					}).removeClass("hide");
-				});
-
-				particlesJS("particles-js", {
-					"particles": {
-						"number": {
-							"value": 80,
-							"density": {
-								"enable": true,
-								"value_area": 800
-							}
-						},
-						"color": {
-							"value": "#ffffff"
-						},
-						"shape": {
-							"type": "circle",
-							"stroke": {
-								"width": 0,
-								"color": "#000000"
-							},
-							"polygon": {
-								"nb_sides": 5
-							},
-							"image": {
-								"src": "img/github.svg",
-								"width": 100,
-								"height": 100
-							}
-						},
-						"opacity": {
-							"value": 0.5,
-							"random": false,
-							"anim": {
-								"enable": false,
-								"speed": 1,
-								"opacity_min": 0.1,
-								"sync": false
-							}
-						},
-						"size": {
-							"value": 3,
-							"random": true,
-							"anim": {
-								"enable": false,
-								"speed": 40,
-								"size_min": 0.1,
-								"sync": false
-							}
-						},
-						"line_linked": {
-							"enable": true,
-							"distance": 150,
-							"color": "#ffffff",
-							"opacity": 0.4,
-							"width": 1
-						},
-						"move": {
-							"enable": true,
-							"speed": 6,
-							"direction": "none",
-							"random": false,
-							"straight": false,
-							"out_mode": "out",
-							"bounce": false,
-							"attract": {
-								"enable": false,
-								"rotateX": 600,
-								"rotateY": 1200
-							}
-						}
-					},
-					"interactivity": {
-						"detect_on": "canvas",
-						"events": {
-							"onhover": {
-								"enable": true,
-								"mode": "repulse"
-							},
-							"onclick": {
-								"enable": true,
-								"mode": "push"
-							},
-							"resize": true
-						},
-						"modes": {
-							"grab": {
-								"distance": 400,
-								"line_linked": {
-									"opacity": 1
-								}
-							},
-							"bubble": {
-								"distance": 400,
-								"size": 40,
-								"duration": 2,
-								"opacity": 8,
-								"speed": 3
-							},
-							"repulse": {
-								"distance": 200,
-								"duration": 0.4
-							},
-							"push": {
-								"particles_nb": 4
-							},
-							"remove": {
-								"particles_nb": 2
-							}
-						}
-					},
-					"retina_detect": true
-				})
-
-
-			}
-			startComingSoon();
-
-		})(jQuery);
-
-
-
-	</script>
-
-</body>
-
+		<!-- Vendors-->
+		<script type="text/javascript" src="assets/vendors/_jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/jquery.countdown/jquery.countdown.min.js"></script>
+		<script type="text/javascript" src="assets/vendors/particles.js/particles.min.js"></script>
+		<!-- main script-->
+		<script type="text/javascript" src="http://13.232.231.147/assets/js/main.js"></script>
+		
+	</body>
 </html>
